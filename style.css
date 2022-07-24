@@ -21,21 +21,7 @@
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --font-family: consolas;
 }
-.dark {
-  /* --bg-body: var(--dark-body); */
-  --bg-main: var(--dark-main);
-  --bg-second: var(--dark-second);
-  --color-hover: var(--dark-hover);
-  --color-txt: var(--dark-text);
-}
 
-.light {
-  /* --bg-body: var(--light-body); */
-  --bg-main: var(--light-main);
-  --bg-second: var(--light-second);
-  --color-hover: var(--light-hover);
-  --color-txt: var(--light-text);
-}
 
 * {
   padding: 0;
@@ -48,37 +34,31 @@ body {
   font-family: var(--font-family);
   background-color: var(--bg-body);
 }
-.sidebar {
-  /* border: 1px solid green; */
+.contianer {
   width: max-content;
   height: max-content;
   position: relative;
-  display: inline-block;
+  display: flex;
   padding: 2% 2px 0 3%;
-  margin: 2px;
+  justify-content: center;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
 }
-.content {
-  width: 700px;
-  height: 600px;
-  border: 1px solid orange;
-  display: inline;
-  position: absolute;
-  margin: 1%;
-  padding: 1%;
-}
+
 /* calendar style */
 .calendar {
-  height: max-content;
+
+   max-height: 635px;
   width: max-content;
   background-color: var(--bg-main);
   border-radius: 25px;
-  margin-bottom: 5%;
-  overflow:hidden;
-  padding: 10px 31px;
+  overflow: hidden;
+  padding: 30px 50px;
   /* border: 2px solid red; */
-
 }
-.light .calendar {
+.calendar {
   box-shadow: var(--shadow);
 }
 .calendar-header {
@@ -97,6 +77,13 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   font-weight: 600;
+  cursor: pointer;
+  color:rgb(104, 104, 104);
+}
+.calendar-week-days div:hover {
+color:black;
+transform: scale(1.2);
+transition: all .2s ease-in-out;
 }
 
 .calendar-week-days div {
@@ -121,7 +108,7 @@ body {
   padding: 5px;
   position: relative;
   cursor: pointer;
-animation: to-top 1s forwards;
+  animation: to-top 1s forwards;
 }
 .month-picker {
   padding: 5px 10px;
@@ -148,7 +135,10 @@ animation: to-top 1s forwards;
   cursor: pointer;
 }
 .year-change:hover {
-  background-color: var(--color-hover);
+  
+  background-color: var(--light-btn);
+  transition:all .2s ease-in-out ;
+  transform: scale(1.12);
 }
 .year-change:hover pre {
   color: var(--bg-body);
@@ -159,51 +149,34 @@ animation: to-top 1s forwards;
   justify-content: flex-end;
   align-items: center;
 }
-.toggle {
-  display: flex;
-}
-.toggle span {
-  margin-right: 12px;
-  color: var(--color-txt);
-}
-.switch-mode {
-  position: relative;
-  width: 50px;
-  height: 25px;
-  border-radius: 15px;
-  background-color: var(--bg-second);
+#year:hover{
   cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2 ease-in-out;
 }
-.switch-mode-sign {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--light-main);
-  position: absolute;
-  top: 2px;
-  left: 4px;
-}
-.dark .switch-mode .switch-mode-sign .month-list {
-  top: 2px;
-  left: 27px;
-  /* left: calc(2px + 50%); */
-}
-
 .calendar-days div span {
   position: absolute;
 }
+ .calendar-days div:hover {
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  background-color: rgb(240, 88, 0);
+  border-radius: 20%;
+  color: var(--dark-text);
+}
+
 
 /* events style */
 
 .event {
-  height: max-content;
+  height: 635px;
   width: max-content;
   background-color: var(--bg-main);
   border-radius: 25px;
-  margin-bottom: 5%;
   overflow: hidden;
+  display: flex;
   font-family: var(--font-family);
   font-size: 2rem;
+  position: relative;
 }
 .event {
   box-shadow: var(--shadow);
@@ -218,7 +191,7 @@ animation: to-top 1s forwards;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--color-txt);
   padding: 5px 10px;
@@ -232,8 +205,6 @@ animation: to-top 1s forwards;
 }
 .add-new-event-btn {
   font-size: 1.2rem;
-  display: block;
-  position: relative;
   border-radius: 50px;
   cursor: pointer;
   background-color: var(--light-btn);
@@ -284,12 +255,12 @@ animation: to-top 1s forwards;
   margin: 0 3px;
 }
 .event-item-title {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
-.event-item-edit {
+.event-item-edit{
 }
 .event-item-text {
-  font-size: 0.8rem;
+  font-size: 0.73rem;
   margin-left: 40px;
   height: max-content;
   justify-content: left;
@@ -309,27 +280,21 @@ animation: to-top 1s forwards;
   border-radius: 20%;
 }
 .month-list {
-  
-  position:relative;
+  position: relative;
   left: 0;
-  top: 0;
-  background-color: #1f213a;
-  color: var(--dark-text);
+  top: -50px;
+  background-color: #ebebeb;
+  color: var(--light-text);
   display: grid;
   grid-template-columns: repeat(3, auto);
-  /* border: 1px solid red; */
   gap: 5px;
-  border-radius:20px;
-  transform: scale(1.3);
-  visibility: hidden;
-  pointer-events: none;
+  border-radius: 20px;
 }
 .month-list > div {
   display: grid;
   place-content: center;
   margin: 5px 10px;
-  
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   /* border: 1px solid red */
 }
 .month-list > div > div {
@@ -338,90 +303,128 @@ animation: to-top 1s forwards;
   cursor: pointer;
 }
 .month-list > div > div:hover {
-
-  background-color: var(--dark-hover);
-  color: var(--light-text);
-
-  
+  background-color:var(--light-btn);
+  color: var(--dark-text);
+  transform: scale(0.9);
+  transition: all 0.2s ease-in-out;
 }
 
-.month-list.show{
+.month-list.show {
   visibility: visible;
   pointer-events: visible;
-  transition: .6s ease-in-out;
-  animation: to-left 1s forwards;
+  transition: 0.6s ease-in-out;
+  animation: to-left .71s forwards;
 }
-.month-list.hide{
+.month-list.hideonce{
+  visibility: hidden;
+}
+.month-list.hide {
   animation: to-right 1s forwards;
-  /* visibility: n; */
+  visibility: none;
   pointer-events: none;
-  transition: 1.4s ease-in-out;
+  /* transition: 1.4s ease-in-out; */
 }
 
 /* date and time show formate */
-.date-time-formate{
+.date-time-formate {
   width: max-content;
   height: max-content;
-  font-family:Dubai Light, Century Gothic;
-  position:relative;
+  font-family: Dubai Light, Century Gothic;
+  position: relative;
   display: inline;
   top: 140px;
-  
 }
-.day-text-formate{
-  font-family:Microsoft JhengHei UI ;
+.day-text-formate {
+  font-family: Microsoft JhengHei UI;
   font-size: 3rem;
   padding-right: 5%;
   border-right: 2px solid orangered;
   position: absolute;
-
+  left: -1rem;
 }
-.date-time-value{
+.date-time-value {
   display: block;
   height: max-content;
   width: max-content;
   position: relative;
-  left: 55%;
+  left: 50%;
   top: -30px;
   text-align: center;
 }
 
-.time-formate{
+.time-formate {
   font-size: 3rem;
-  
 }
-.date-formate{
+.date-formate {
+  /* transform:  */
+}
+.time-formate.hideTime {
+  animation: hidetime 1.5s forwards;
+}
+.day-text-formate.hidetime {
+
+  animation: hidetime 1.5s forwards;
+}
+.date-formate.hideTime {
+  animation: hidetime 1.5s forwards;
+}
+.day-text-formate.showtime{
+  animation: showtime 1s forwards;
+}
+.time-formate.showtime {
+  animation: showtime 1s forwards;
+}
+.date-formate.showtime {
+  animation: showtime 1s forwards;
 }
 @keyframes to-top {
-  0%{
-
+  0% {
     transform: translateY(100%);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes to-left {
-  0%{
-
+  0% {
     transform: translatex(230%);
-    opacity: 0;
+    opacity: 1;
   }
-  100%{
+  100% {
     transform: translatex(0);
     opacity: 1;
   }
 }
 @keyframes to-right {
-  100%{
-
-    transform: translatex(130%);
+  10% {
+    transform: translatex(0);
     opacity: 1;
   }
-  0%{
-    transform: translatex(0);
-    opacity: 0;
+  100% {
+    transform: translatex(-130%);
+    opacity: 1;
   }
 }
+@keyframes showtime {
+  0% {
+    transform: translatex(250%);
+    opacity: 1;
+  }
+  100% {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+}
+@keyframes hidetime {
+  0% {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translatex(-350%);
+    opacity: 1;
+  }
+}
+
