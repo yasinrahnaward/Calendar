@@ -35,13 +35,7 @@
             <div>Sat</div>
           </div>
           <div class="calendar-days">
-            <div>
-              1
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <div>1</div>
             <div>2</div>
             <div>3</div>
             <div>4</div>
@@ -51,9 +45,6 @@
           </div>
         </div>
         <div class="calendar-footer">
-          <!-- <div class="toggle"> -->
-          <!-- <span>Dark Mode</span> -->
-          <!-- </div> -->
         </div>
         <div class="date-time-formate">
           <div class="day-text-formate">TODAY</div>
@@ -65,71 +56,217 @@
         <div class="month-list"></div>
       </div>
     
-    <!-- events -->
-    <div class="event">
-      <div class="event-header">
-        <span class="event-logo">Events</span>
-        <div class="add-new-event-btn">
-          <span>+ </span>
-          New
+     <!-- events -->
+      <div class="event">
+        <div class="event-header">
+          <div class="add-new-event-btn">
+            <span>+ </span>
+            New
+          </div>
+          <span class="event-logo">Events</span>
         </div>
+        
+        <div class="event-body">
+          <!-- add new event -->
+          <div class="new-event ">
+            <div class="new-event-header">
+              <h2 class="title-text">&#10010 New Eevent</span>
+              <h2 class="close-btn">&#10005</h2>
+            </div>
+            <form class="new-event-body ">
+              <label for="new-event-title" id="new-event-title" class="new-event-title-label">Title</label>
+              <input type="text" id="new-event-title-value"placeholder="New Event Title">
+              <textarea name="description" placeholder="Descriptions" id="new-event-description" cols="30" rows="5"></textarea>
+              <div class="new-event-date-time">
+                <label for="">start</label>
+                <input type="date" name="" id="new-event-start-date">
+                <select name="" id="new-event-start-time" >
+                  <option value="Not specified">Not specified </option>
+                  <option value="12:00 AM">12:00 AM</option>
+                  <option value="12:30 AM">12:30 AM</option>
+                  <option value="1:00 AM">1:00 AM</option>
+                  <option value="1:30 AM">1:30 AM</option>
+                  <option value="2:00 AM">2:00 AM</option>
+                  <option value="2:30 AM">2:30 AM</option>
+                  <option value="3:00 AM">3:00 AM</option>
+                  <option value="3:30 AM">3:30 AM</option>
+                  <option value="4:00 AM">4:00 AM</option>
+                  <option value="4:30 AM">4:30 AM</option>
+                  <option value="5:00 AM">5:00 AM</option>
+                  <option value="5:30 AM">5:30 AM</option>
+                  <option value="6:00 AM">6:00 AM</option>
+                  <option value="6:30 AM">6:30 AM</option>
+                  <option value="7:00 AM">7:00 AM</option>
+                  <option value="7:30 AM">7:30 AM</option>
+                  <option value="8:00 AM">8:00 AM</option>
+                  <option value="8:30 AM">8:30 AM</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="9:30 AM">9:30 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="10:30 AM">10:30 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="12:30 PM">12:30 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="1:30 PM">1:30 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="2:30 PM">2:30 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="3:30 PM">3:30 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                  <option value="4:30 PM">4:30 PM</option>
+                  <option value="5:00 PM">5:00 PM</option>
+                  <option value="5:30 PM">5:30 PM</option>
+                  <option value="6:00 PM">6:00 PM</option>
+                  <option value="6:30 PM">6:30 PM</option>
+                  <option value="7:00 PM">7:00 PM</option>
+                  <option value="7:30 PM">7:30 PM</option>
+                  <option value="8:00 PM">8:00 PM</option>
+                  <option value="8:30 PM">8:30 PM</option>
+                  <option value="9:00 PM">9:00 PM</option>
+                  <option value="9:30 PM">9:30 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                  <option value="10:30 PM">10:30 PM</option>
+                  <option value="11:00 PM">11:00 PM</option>
+                  <option value="11:30 PM">11:30 PM</option>
+
+                </select>
+                <label for="">End</label>
+                <input type="date" name="" id="end-event-start-date">
+                <select name="" id="new-event-end-time">
+                  <option value="Not specified">Not specified </option>
+                  <option value="12:00 AM">12:00 AM</option>
+                  <option value="12:30 AM">12:30 AM</option>
+                  <option value="1:00 AM">1:00 AM</option>
+                  <option value="1:30 AM">1:30 AM</option>
+                  <option value="2:00 AM">2:00 AM</option>
+                  <option value="2:30 AM">2:30 AM</option>
+                  <option value="3:00 AM">3:00 AM</option>
+                  <option value="3:30 AM">3:30 AM</option>
+                  <option value="4:00 AM">4:00 AM</option>
+                  <option value="4:30 AM">4:30 AM</option>
+                  <option value="5:00 AM">5:00 AM</option>
+                  <option value="5:30 AM">5:30 AM</option>
+                  <option value="6:00 AM">6:00 AM</option>
+                  <option value="6:30 AM">6:30 AM</option>
+                  <option value="7:00 AM">7:00 AM</option>
+                  <option value="7:30 AM">7:30 AM</option>
+                  <option value="8:00 AM">8:00 AM</option>
+                  <option value="8:30 AM">8:30 AM</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="9:30 AM">9:30 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="10:30 AM">10:30 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="12:30 PM">12:30 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="1:30 PM">1:30 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="2:30 PM">2:30 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="3:30 PM">3:30 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                  <option value="4:30 PM">4:30 PM</option>
+                  <option value="5:00 PM">5:00 PM</option>
+                  <option value="5:30 PM">5:30 PM</option>
+                  <option value="6:00 PM">6:00 PM</option>
+                  <option value="6:30 PM">6:30 PM</option>
+                  <option value="7:00 PM">7:00 PM</option>
+                  <option value="7:30 PM">7:30 PM</option>
+                  <option value="8:00 PM">8:00 PM</option>
+                  <option value="8:30 PM">8:30 PM</option>
+                  <option value="9:00 PM">9:00 PM</option>
+                  <option value="9:30 PM">9:30 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                  <option value="10:30 PM">10:30 PM</option>
+                  <option value="11:00 PM">11:00 PM</option>
+                  <option value="11:30 PM">11:30 PM</option>
+
+                </select>
+                <label for="">RemindMe</label>
+                <label for=""></label>
+                <select name="" id="remind-me-options">
+                  <option value="Never">Never</option>
+                  <option value="0 minute before">0 minute before</option>
+                  <option value="5 minutes before">5 minutes before</option>
+                  <option value="15 minutes before">15 minutes before</option>
+                  <option value="30 minutes before">30 minutes before</option>
+                  <option value="1 hour before">1 hour before</option>
+                  <option value="6 hours before">6 hours before</option>
+                  <option value="12 hours before">12 hours before</option>
+                  <option value="1 day before">1 day before</option>
+                  <option value="1 week before">1 week before</option>
+                </select>
+              </div>
+            </form>
+            <div class="new-event-btn-container">
+              <input class="new-event-btn" id="new-event-save" type="button" value="Save">
+              <input class="new-event-btn" id="new-event-reset" type="button" value="Reset">
+              <input class="new-event-btn" id="new-event-cancel" type="button" value="Cancel">
+            </div>  
+            <!-- <p>Made with &#9786 By &#10170 Yasin Rahnaward </p> -->
+          </div>
+          <!-- EVENT iTEMS -->
+          <div class="event-itme-container">
+            <div class="event-items">
+              <span class="event-item-color"></span>
+              <span class="event-item-title">JavaScript</span>
+              <span class="event-item-edit">&#9998</span>
+              <span class="event-item-delete">&#9587</span>
+              <p class="event-item-text">
+                Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.a
+              </p>
+              <div class="event-item-date" id="event-date-start">start : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-end">End : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-remains">Remains : 22/26/2022</div>
+            </div>
+            <div class="event-items">
+              <span class="event-item-color"></span>
+              <span class="event-item-title">Python</span>
+              <span class="event-item-edit">&#9998</span>
+              <span class="event-item-delete">&#9587</span>
+              <p class="event-item-text">
+                Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
+
+              </p>
+              <div class="event-item-date" id="event-date-start">start : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-end">End : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-remains">Remains : 22/26/2022</div>
+            </div>
+            <div class="event-items">
+              <span class="event-item-color"></span>
+              <span class="event-item-title">SQL server</span>
+              <span class="event-item-edit">&#9998</span>
+              <span class="event-item-delete">&#9587</span>
+              <p class="event-item-text">
+                To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other.   
+              </p>
+              <div class="event-item-date" id="event-date-start">start : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-end">End : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-remains">Remains : 22/26/2022</div>
+            </div>
+            <div class="event-items">
+              <span class="event-item-color"></span>
+              <span class="event-item-title">PHP</span>
+              <span class="event-item-edit">&#9998</span>
+              <span class="event-item-delete">&#9587</span>
+              <p class="event-item-text">
+                work with models, routing, migerations,events and sunchtum
+              </p>
+              <div class="event-item-date" id="event-date-start">start : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-end">End : 22/26/2022</div>
+              <div class="event-item-date" id="event-date-remains">Remains : 22/26/2022</div>
+            </div>
+            
+          </div>
+        </div>
+        
       </div>
-      <div class="event-body">
-        <div class="event-items">
-            <span class="event-item-color"></span>    
-            <span class="event-item-title">Java</span>
-            <span class="event-item-delete"></span>
-            <span class="event-item-edit"></span>
-            <p class="event-item-text">deal with multi treading feature of this language</p>
-            <div class="event-item-date">22/26/2022</div>
-          </div>  
-        <div class="event-items">
-            <span class="event-item-color"></span>    
-            <span class="event-item-title">Java</span>
-            <span class="event-item-delete"></span>
-            <span class="event-item-edit"></span>
-            <p class="event-item-text">to deal with .net frame work</p>
-            <div class="event-item-date">22/26/2022</div>
-          </div>  
-        <div class="event-items">
-            <span class="event-item-color"></span>    
-            <span class="event-item-title">c#</span>
-            <span class="event-item-delete"></span>
-            <div class="event-item-edit"></div>
-            <p class="event-item-text">to deal with .net frame work</p>
-            <div class="event-item-date">22/26/2022</div>
-          </div>  
-        <div class="event-items">
-            <span class="event-item-color"></span>    
-            <span class="event-item-title">Java Script</span>
-            <span class="event-item-delete"></span>
-            <span class="event-item-edit"></span>
-            <p class="event-item-text">java script is the most power full && known languag</p>
-            <div class="event-item-date">22/26/2022</div>
-          </div>  
-        <div class="event-items">
-          <span class="event-item-color"></span>
-          <span class="event-item-title">PHP</span>
-          <span class="event-item-delete"></span>
-          <span class="event-item-edit"></span>
-          <p class="event-item-text">
-            work with models, routing, migerations,events and sunchtum
-          </p>
-          <div class="event-item-date">22/26/2022</div>
-        </div>
-        <div class="event-items">
-          <span class="event-item-color"></span>
-          <span class="event-item-title">MYSQL</span>
-          <span class="event-item-delete"></span>
-          <span class="event-item-edit"></span>
-          <p class="event-item-text">
-            introduction with Mysql which is a back technology.
-          </p>
-          <div class="event-item-date">22/26/2022</div>
-        </div>
-      </div>
+      
     </div>
-  </div>
 
     <script src="script.js"></script>
   </body>

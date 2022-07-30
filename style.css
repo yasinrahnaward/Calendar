@@ -33,13 +33,15 @@ body {
   place-items: center;
   font-family: var(--font-family);
   background-color: var(--bg-body);
+  
+
 }
 .contianer {
   width: max-content;
   height: max-content;
   position: relative;
   display: flex;
-  padding: 2% 2px 0 3%;
+  padding: 2% 0px 0px 0px;
   justify-content: center;
   top: 0%;
   right: 0%;
@@ -50,13 +52,12 @@ body {
 /* calendar style */
 .calendar {
 
-   max-height: 635px;
+  height: 610px;
   width: max-content;
   background-color: var(--bg-main);
   border-radius: 25px;
   overflow: hidden;
-  padding: 30px 50px;
-  /* border: 2px solid red; */
+  padding: 30px 50px 0px 50px;
 }
 .calendar {
   box-shadow: var(--shadow);
@@ -65,7 +66,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 5rm;
   font-weight: 700;
   color: var(--color-txt);
   padding: 10px;
@@ -168,15 +168,16 @@ transition: all .2s ease-in-out;
 /* events style */
 
 .event {
-  height: 635px;
-  width: max-content;
+  height: 610px;
+  width: 42%;
   background-color: var(--bg-main);
   border-radius: 25px;
   overflow: hidden;
-  display: flex;
+
+  display: inline-flex;
   font-family: var(--font-family);
-  font-size: 2rem;
-  position: relative;
+  justify-content: center;
+  position: inherit;
 }
 .event {
   box-shadow: var(--shadow);
@@ -185,8 +186,9 @@ transition: all .2s ease-in-out;
 .event-body {
   height: max-content;
   width: max-content;
+
 }
-/* event header style */
+
 .event-header {
   display: flex;
   justify-content: space-between;
@@ -197,14 +199,23 @@ transition: all .2s ease-in-out;
   padding: 5px 10px;
   margin: 5px 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position:sticky;
+
 }
 .event-logo:hover {
   transform: scale(0.95);
   transition: 0.2s ease-in-out;
   cursor: pointer;
+
+}
+.event-itme-container{
+  margin-top: 20px;
+  overflow-y: scroll;
+  display: block;
+  height: 570px;
 }
 .add-new-event-btn {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 50px;
   cursor: pointer;
   background-color: var(--light-btn);
@@ -234,7 +245,12 @@ transition: all .2s ease-in-out;
   padding: 5px 5px;
   align-items: right;
   cursor: pointer;
+  display: block;
+  z-index: 0;
+  animation: to-top 1s ;
+  transition: all .4s ease-in-out;
 }
+
 .event-items:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 5px 0px;
   transform: scale(1.01);
@@ -255,9 +271,27 @@ transition: all .2s ease-in-out;
   margin: 0 3px;
 }
 .event-item-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  display: inline-flex;
+  width: 13rem;
 }
 .event-item-edit{
+  color: var(--light-text);
+  cursor: pointer;
+}
+.event-item-edit:hover{
+  font-size: 1.2rem;
+  color: #ff9100;
+}
+.event-item-delete{
+  color: var(--light-text);
+  cursor: pointer;
+  font-size: .8rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.event-item-delete:hover{
+  font-size: 0.9rem;
+  color: #d80000;
 }
 .event-item-text {
   font-size: 0.73rem;
@@ -265,6 +299,7 @@ transition: all .2s ease-in-out;
   height: max-content;
   justify-content: left;
   width: 260px;
+  margin-bottom: 10px;
 }
 .event-item-date {
   font-size: 0.8rem;
@@ -272,6 +307,11 @@ transition: all .2s ease-in-out;
   height: max-content;
   align-content: center;
   margin-top: 8px;
+}
+.event-item-date{
+margin: 0%;
+font-size: .8rem;
+margin-left: 40px;
 }
 .calendar-days div.current-date {
   color: var(--dark-text);
@@ -295,7 +335,6 @@ transition: all .2s ease-in-out;
   place-content: center;
   margin: 5px 10px;
   transition: all 0.2s ease-in-out;
-  /* border: 1px solid red */
 }
 .month-list > div > div {
   border-radius: 15px;
@@ -322,7 +361,6 @@ transition: all .2s ease-in-out;
   animation: to-right 1s forwards;
   visibility: none;
   pointer-events: none;
-  /* transition: 1.4s ease-in-out; */
 }
 
 /* date and time show formate */
@@ -333,10 +371,11 @@ transition: all .2s ease-in-out;
   position: relative;
   display: inline;
   top: 140px;
+  justify-content: center;
 }
 .day-text-formate {
   font-family: Microsoft JhengHei UI;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding-right: 5%;
   border-right: 2px solid orangered;
   position: absolute;
@@ -353,11 +392,9 @@ transition: all .2s ease-in-out;
 }
 
 .time-formate {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
-.date-formate {
-  /* transform:  */
-}
+
 .time-formate.hideTime {
   animation: hidetime 1.5s forwards;
 }
@@ -377,6 +414,116 @@ transition: all .2s ease-in-out;
 .date-formate.showtime {
   animation: showtime 1s forwards;
 }
+
+
+/* new event window */
+.new-event{
+  height: max-content;
+  width: max-content;
+  position:absolute;
+  display: inline;
+  background-color: rgb(250, 250, 250);
+  box-shadow: var(--shadow);
+  top: -110%;
+  left: 0px;
+  justify-content: center;
+  padding: 0px 5px 50px 5px;
+border-radius: 20px;
+}
+.new-event-header{
+position: relative;
+top: 20px;
+left: 30px;
+justify-content: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+color: var(--light-btn);
+
+}
+.title-text{
+  font-size: 1.6rem;
+  font-family: Dubai Light, Century Gothic;
+  display: inline-block;
+  width: 430px;
+}
+.close-btn{
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 2px;
+ text-align: left;
+ cursor: pointer;
+  
+}
+.close-btn:hover
+{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: .3 ease-in-out;
+}
+.new-event-body{
+padding: 5px;
+margin: 50px 5px;
+}
+
+
+/* CREATE NEW EVENT */
+
+.new-event-body{
+display: grid;
+font-size: 1.2rem;
+
+}
+.new-event-body >input,textarea,label {
+margin: 2px;
+padding: 4px;
+font-family:Dubai Light, Century Gothic;
+}
+
+.new-event-date-time
+{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+}
+.new-event-date-time >input,select
+{
+
+padding: 4px;
+font-family:Dubai Light, Century Gothic;
+margin: 10px 5;
+}
+.new-event-btn-container{
+  width: 32rem;
+  display: flex;
+  justify-content: end;
+}
+.new-event-btn{
+  padding:10px  15px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--light-btn);
+  font-family: 400;
+  margin-right: 10px;
+
+
+}
+.new-event-btn:hover{
+  transform: scale(1.012);
+  background-color: rgb(238, 111, 8);
+  
+  transition: .2s ease-in-out;
+
+
+}
+/* new event for animation */
+.new-event.showNewEventForm{
+  animation: 1s event-to-bottom forwards;
+  top:0%;
+}
+.new-event.hideNewEventForm{
+  animation: 1s event-to-top forwards;
+}
+
+/* keyframes for calendar and timer */
 @keyframes to-top {
   0% {
     transform: translateY(100%);
@@ -387,6 +534,7 @@ transition: all .2s ease-in-out;
     opacity: 1;
   }
 }
+
 @keyframes to-left {
   0% {
     transform: translatex(230%);
@@ -428,3 +576,27 @@ transition: all .2s ease-in-out;
   }
 }
 
+
+/* keyframes for new event form */
+@keyframes event-to-top {
+  0%{
+    transform:translateY(0%) ;
+    opacity: 1;
+    top:0%;
+  }
+ 100%{
+    transform: translateY(-90%);
+    opacity: 1;
+  }
+}
+@keyframes event-to-bottom {
+  0%{
+    transform:translateY(-100%) ;
+    opacity: 1;
+    top:-90%;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
