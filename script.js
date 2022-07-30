@@ -307,22 +307,35 @@ const createNewEvent = () => {
     endDatevalidation();
     setTimeout(resettitletext, 6000);
   }
-  btnDeleteEvent=document.getElementsByClassName('event-item-delete');
-  console.log(btnDeleteEvent.parentElement);
-  for (const i of btnDeleteEvent) {
+  // delete events over for of loop
+  // btnDeleteEvent=document.getElementsByClassName('event-item-delete');
+  // console.log(btnDeleteEvent.parentElement);
+  // for (const i of btnDeleteEvent) {
 
-    i.addEventListener('click',()=>{
-        console.log(i);
-        const t=setTimeout(()=>{
-          i.parentElement.classList.add('to-top');
-          // i.classList.remove('to-down');
-          i.parentElement.remove();
-       },100);
+  //   i.addEventListener('click',()=>{
+  //       console.log(i);
+  //       const t=setTimeout(()=>{
+  //         i.parentElement.classList.add('to-top');
+  //         i.parentElement.remove();
+  //      },100);
 
-    });
-    }
+  //   });
+  //   }
   
 };
+
+
+// event progration && event delegation
+// add event listener to a common parent of intersted elements
+const delg=document.querySelector('.event-itme-container');
+delg.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('event-item-delete')){
+
+    console.log(e.target.parentElement.remove());
+  }
+});
+
+
 
 btnSaveNewEvent.addEventListener('click', (e) => {
   createNewEvent()
